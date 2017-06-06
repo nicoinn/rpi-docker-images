@@ -1,0 +1,12 @@
+autoconf 
+automake
+libtool 
+libdaemon-dev 
+libasound2-dev 
+libpopt-dev 
+libconfig-dev
+avahi-daemon 
+libavahi-client-dev
+libssl-dev
+git
+build-essential
