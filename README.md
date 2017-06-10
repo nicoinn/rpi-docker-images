@@ -14,4 +14,4 @@ Download the example configuration [from the Shairport-sync repository](https://
 
 #### Run the container 
 
-```docker run --net="host" -d   -v /dev/snd:/dev/snd --privileged -v /var/run/dbus:/var/run/dbus -v /in/a/folder/of/your/choice:/config shairport-sync:latest```
+```docker run --net="host" -d   -v /dev/snd:/dev/snd --privileged -v /var/run/dbus:/var/run/dbus -v /in/a/folder/of/your/choice:/config rpi-docker-images:shairport-sync```
