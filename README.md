@@ -1,7 +1,17 @@
-# rpi-docker-images
+# rpi-docker-images:shairport-sync
 
-A few useful containerised apps for running on my Raspberry Pis. 
+Containerized version of Shairport-sync (wiht multistage build). 
 
-Each app lives in its own branch and are available on [my Docker hub repo](https://hub.docker.com/r/nicoinn/)
+***Important remark*** DockerHub does not support multistage autobuilds yet --- this is coming within days :)
 
-Also...  yes, I know, that's not how one is supposed to use git branches - but hey, works for me ;)
+#### Download/Update:
+```rpi-docker-images:shairport-sync```
+
+#### Configuration
+
+Download the example configuration [from the Shairport-sync repository](https://github.com/mikebrady/shairport-sync/blob/master/scripts/shairport-sync.conf), edit it to your needs and place in /in/a/folder/of/your/choice on the host. 
+
+
+#### Run the container 
+
+```docker run --net="host" -d   -v /dev/snd:/dev/snd --privileged -v /var/run/dbus:/var/run/dbus -v /home/pi/dockerapps/shairport-sync:/config shairport-sync:latest```
